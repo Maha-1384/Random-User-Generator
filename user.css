@@ -109,7 +109,7 @@ button {
 }
 
 button:hover {
-  background-color: rgb(255, 217, 171);
+  background-color: rgba(252, 227, 195, 0.606);
 }
 @media (min-width: 320px) and (max-width: 590px) {
   .info-box {
