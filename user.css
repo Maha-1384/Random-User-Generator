@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main-box {
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3em 2em;
+  background-color: antiquewhite;
+  text-align: center;
+  width: 80%;
+  margin: 5% auto;
+}
+.info-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0rem 0rem 0rem;
+}
+.info-div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding-left: 1rem;
+}
+.img-div img {
+  border-radius: 50%;
+}
+.img-div {
+  align-items: center;
+  justify-content: center;
+}
+.label {
+  font-size: 1.4em;
+}
+.input {
+  font-size: 1.2em;
+}
+.generate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.generate div {
+  margin-right: 6px;
+}
+button {
+  background-color: bisque;
+  border: none;
+  margin-top: 1.2em;
+  padding: 0.8em 0px;
+}
+.spinner {
+  display: none;
+}
+.spinner {
+  --frame: 1s;
+}
+.spinner,
+.spinner::before,
+.spinner::after {
+  border: 2px solid rgb(0, 0, 0);
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+}
+.spinner {
+  font-size: 3.5em;
+  width: 0.6em;
+  height: 0.6em;
+  -webkit-animation: anim-spinner var(--frame) ease infinite;
+  animation: anim-spinner var(--frame) ease infinite;
+}
+.spinner::before,
+.spinner::after {
+  content: '';
+  position: absolute;
+}
+.spinner::before {
+  inset: 2px;
+  -webkit-animation: anim-spinner calc(var(--frame) * 4.3) ease-in infinite;
+  animation: anim-spinner calc(var(--frame) * 4.3) ease-in infinite;
+}
+.spinner::after {
+  inset: 5px;
+  -webkit-animation: anim-spinner calc(var(--frame) * 1.51) ease-out infinite;
+  animation: anim-spinner calc(var(--frame) * 1.51) ease-out infinite;
+}
+
+@-webkit-keyframes anim-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes anim-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+button:hover {
+  background-color: rgb(255, 217, 171);
+}
+@media (min-width: 320px) and (max-width: 590px) {
+  .info-box {
+    flex-direction: column;
+  }
+}
